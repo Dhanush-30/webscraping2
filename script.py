@@ -32,7 +32,7 @@ def scrap(field,Location,Experience):
             pass
     data1=pd.DataFrame(det)
     ##
-    urli='https://www.indeed.co.in/jobs?q='+field+'&l='+Location
+    urli='https://www.indeed.co.in/jobs?q='+str(field)+'&l='+str(Location)
     driver.get(urli)
     detin=[]
     for i in range(5,10,2):
