@@ -42,10 +42,7 @@ def scrap(field,Location,Experience):
         try:
             company=driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td/table/tbody/tr/td[1]/div['+str(i)+']/div[1]/div[1]/span').text
         except:
-            try:
-                company=driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td/table/tbody/tr/td[1]/div['+str(i)+']/div[1]/div[1]/span[1]').text
-            except:
-                company='Nan'
+            company='Nan'
             
         link=a.get_property('href')
         tempj={'job_title':title,
