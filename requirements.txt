@@ -9,4 +9,3 @@ numpy>=1.16.2
 pandas>=0.25
 selenium==3.141
 gevent>1.4
-ChromeDriver>=83.0 
