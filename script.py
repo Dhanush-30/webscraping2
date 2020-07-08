@@ -14,7 +14,7 @@ def scrap(field,Location,Experience):
     
     driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
     from selenium import webdriver
-    urlm='https://www.monsterindia.com/srp/results?query='+field+'&locations='+Location+'&experienceRanges='+Experience+'~'+Experience+'&experience='+Experience+'&searchId=81e909fa-3756-40af-be64-538c1eade7e1'
+    urlm='https://www.monsterindia.com/srp/results?query='+str(field)+'&locations='+str(Location)+'&experienceRanges='+str(Experience)+'~'+str(Experience)+'&experience='+str(Experience)+'&searchId=81e909fa-3756-40af-be64-538c1eade7e1'
     driver.get(urlm)
     det=[]
     for i in range(1,4):
