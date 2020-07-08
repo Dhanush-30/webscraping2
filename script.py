@@ -4,10 +4,7 @@ def scrap(field,Location,Experience):
     import os
     from selenium import webdriver
     import pandas as pd
-    GOOGLE_CHROME_BIN = '/app/.apt/usr/bin/google_chrome'
-    CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
         
-    
     chrome_options = webdriver.ChromeOptions()
     
     chrome_options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
@@ -16,6 +13,7 @@ def scrap(field,Location,Experience):
     chrome_options.add_argument('headless')
     
     driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=chrome_options)
+    from selenium import webdriver
     urlm='https://www.monsterindia.com/srp/results?query='+field+'&locations='+Location+'&experienceRanges='+Experience+'~'+Experience+'&experience='+Experience+'&searchId=81e909fa-3756-40af-be64-538c1eade7e1'
     driver.get(urlm)
     det=[]
