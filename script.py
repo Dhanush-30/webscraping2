@@ -37,7 +37,7 @@ def scrap(field,Location,Experience):
             ma=m.get_property('href')        
             listoflinksm.append(ma)
             length=len(listoflinksm)
-            if length==2:
+            if length==5:
                 break
             else:
                 continue
@@ -76,7 +76,7 @@ def scrap(field,Location,Experience):
     except:
         pass
     driver.get(urls)
-    time.sleep(3)
+    time.sleep(2)
     driver.find_element_by_xpath('html/body/div[3]/div[1]/div[1]/div/div[1]/div[1]').click()
     #/html/body/div[3]/div[1]/div[1]/div/div[1]/div[1]/div/ul
     fieldar=driver.find_element_by_xpath('//*[@id="id_q"]')
