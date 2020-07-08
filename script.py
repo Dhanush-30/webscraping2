@@ -46,7 +46,10 @@ def scrap(field,Location,Experience):
         except:
             company='Nan'
             
-        link=a.get_property('href')
+        try:
+            link=a.get_property('href')
+        except:
+            link='indeed.com'
         tempj={'job_title':title,
               'company':company,
               'link for more details':link}
