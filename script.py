@@ -35,13 +35,13 @@ def scrap(field,Location,Experience):
     urli='https://www.indeed.co.in/jobs?q='+str(field)+'&l='+str(Location)
     driver.get(urli)
     detin=[]
-    for i in range(5,10,2):
+    for i in range(7,12,2):
         try:
             a=driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td/table/tbody/tr/td[1]/div['+str(i)+']/h2/a')
             title=a.text
         except:
             pass
-        try:
+        try:#/html/body/table[2]/tbody/tr/td/table/tbody/tr/td[1]/div[11]/div[1]/div[1]
             company=driver.find_element_by_xpath('/html/body/table[2]/tbody/tr/td/table/tbody/tr/td[1]/div['+str(i)+']/div[1]/div[1]/span').text
         except:
             company='Nan'
